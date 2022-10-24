@@ -1,6 +1,5 @@
 # TODO
 
-- Prep thing of doing open source?
 - What about updating the hook list?
 - What about possibility of custom hooks?
 - Simply create a JSON with ext to hook text pairs
