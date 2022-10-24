@@ -13,7 +13,6 @@ terminal_menu = TerminalMenu(options)
 
 # Funcs
 def main():
-
     # CLEAR SCREEN (get func from a helper sort of file?)
 
     print(

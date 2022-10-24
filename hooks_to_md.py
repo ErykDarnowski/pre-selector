@@ -4,8 +4,8 @@
 import json
 
 # Vars
-jsonFile = open("hooks.json")
-data = json.load(jsonFile)
+json_file = open("hooks.json")
+data = json.load(json_file)
 counter = 0
 
 # Getting + printing values:
@@ -29,4 +29,4 @@ for group in data:
 print("\n<p>Hook count:" + str(counter) + "</p>")
 
 # Closing JSON file
-jsonFile.close()
+json_file.close()
