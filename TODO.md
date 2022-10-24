@@ -1,7 +1,9 @@
 # TODO
 
 - Suggest that custom hooks are available?
-- Create a JSON with ext to hook text pairs and from it get the hooks based on found ext
+- Fix the `directories` / `extensions` thing with the `hook_ext_pairs.json` file
+- Add requirements.txt file [res1](https://www.google.com/search?q=requirements+file&oq=requirements+file&aqs=chrome..69i57.2414j0j1&sourceid=chrome&ie=UTF-8) ; [res2](https://stackoverflow.com/a/41117308/11749019)
+- Implement import solution [res1](https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files) ; [res2](https://csatlas.com/python-import-file-module/)
 <!-- -->
 - Modes
   - Select everything by yourself mode (language / name and such)
