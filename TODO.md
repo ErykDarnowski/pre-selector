@@ -1,6 +1,8 @@
 # TODO
 
-- Implement formatter (black?)
+- Prep thing of doing open source?
+- What about updating the hook list?
+- What about possibility of custom hooks?
 - Simply create a JSON with ext to hook text pairs
 - Show list of possible categories so people can find new stuff to use
 - Print final result in to MD file and let user pick and choose final hooks
