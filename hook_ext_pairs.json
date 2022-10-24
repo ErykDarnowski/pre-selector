@@ -1,0 +1,14 @@
+{
+	"git": {
+		"directory": [
+			"git"
+		],
+		"text": "- <https://github.com/milin/gitown>\n  - gitown = Keep your CODEOWNERS file up to date to streamline code review process.\n\n- <https://github.com/homebysix/pre-commit-macadmin>\n  - check-git-config-email = This hook checks to ensure the Git config email matches one of the specified domains.\n"
+	},
+	"swift": {
+		"extensions": [
+			"swift"
+		],
+		"text": "- <https://github.com/nicklockwood/SwiftFormat>\n  - swiftformat = Check swift files for formating issues with SwiftFormat\n\n- <https://github.com/realm/SwiftLint>\n  - swiftlint = Check Swift files for issues with SwiftLint"
+	}
+}
