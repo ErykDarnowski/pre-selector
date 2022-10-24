@@ -1,14 +1,23 @@
 {
-	"git": {
-		"directory": [
+	"Git": {
+		"directories": [
 			"git"
 		],
 		"text": "- <https://github.com/milin/gitown>\n  - gitown = Keep your CODEOWNERS file up to date to streamline code review process.\n\n- <https://github.com/homebysix/pre-commit-macadmin>\n  - check-git-config-email = This hook checks to ensure the Git config email matches one of the specified domains.\n"
 	},
-	"swift": {
+	"Swift": {
 		"extensions": [
 			"swift"
 		],
 		"text": "- <https://github.com/nicklockwood/SwiftFormat>\n  - swiftformat = Check swift files for formating issues with SwiftFormat\n\n- <https://github.com/realm/SwiftLint>\n  - swiftlint = Check Swift files for issues with SwiftLint"
+	},
+	"JavaScript": {
+		"extensions": [
+			"js",
+			"jsx",
+			"ts",
+			"tsx"
+		],
+		"text": "- <https://github.com/pre-commit/pre-commit-hooks>\n  - check-json = checks json files for parseable syntax.\n  - pretty-format-json = sets a standard for formatting json files.\n\n- <https://github.com/pre-commit/mirrors-fixmyjs>\n  - fixmyjs = fixmyjs\n\n- <https://github.com/pre-commit/mirrors-jshint>\n  - jshint = \n\n- <https://github.com/elidupuis/mirrors-jscs>\n  - jscs = jscs\n\n- <https://github.com/Lucas-C/pre-commit-hooks-nodejs>\n  - htmlhint = NodeJS HTML syntax linter (htmlhint)\n  - htmllint = NodeJS HTML syntax linter (htmllint)"
 	}
 }
