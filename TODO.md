@@ -1,10 +1,6 @@
 # TODO
 
-- Prep for open source?
-<!-- -->
-- Error catching + msgs
-- Add spinner animations (Sciagi)?
-- Suggest the possibility of custom hooks?
+- Suggest that custom hooks are available?
 - Create a JSON with ext to hook text pairs and from it get the hooks based on found ext
 <!-- -->
 - Modes
@@ -19,3 +15,7 @@
       - `run` / `artisan` (no ext) try getting from shebang?
       - `.env.testing` / `.add.spl` (combined ext)
       - `.gitattribute` (file names that are the ext)
+<!-- -->
+- Add spinner animations (Sciagi)?
+- Error catching + msgs
+- Prep for open source?
