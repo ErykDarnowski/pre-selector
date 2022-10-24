@@ -412,7 +412,7 @@
             "args": [],
             "require_serial": false,
             "additional_dependencies": [
-                "eslint@8.24.0"
+                "eslint@8.26.0"
             ],
             "minimum_pre_commit_version": "0"
         }
@@ -482,7 +482,7 @@
             "args": [],
             "require_serial": false,
             "additional_dependencies": [
-                "prettier@3.0.0-alpha.0"
+                "prettier@3.0.0-alpha.3"
             ],
             "minimum_pre_commit_version": "0"
         }
@@ -5021,7 +5021,7 @@
         {
             "id": "gdformat",
             "name": "gdformat",
-            "description": "gdformat - formater for GDScript",
+            "description": "gdformat - formatter for GDScript",
             "entry": "gdformat",
             "language": "python",
             "language_version": "python3",
@@ -5669,6 +5669,18 @@
             ],
             "files": "",
             "minimum_pre_commit_version": "0.15.0"
+        }
+    ],
+    "https://github.com/MarcoGorelli/auto-walrus": [
+        {
+            "id": "auto-walrus",
+            "name": "auto-walrus",
+            "description": "Automatically use the walrus operator!",
+            "entry": "auto-walrus",
+            "language": "python",
+            "types": [
+                "python"
+            ]
         }
     ],
     "https://github.com/MarcoGorelli/cython-lint": [
@@ -6683,6 +6695,39 @@
             ],
             "entry": "ufmt format",
             "require_serial": true
+        }
+    ],
+    "https://github.com/daveshanley/vacuum": [
+        {
+            "id": "vacuum",
+            "name": "vacuum",
+            "description": "OpenAPI linter and quality checker (native install)",
+            "language": "golang",
+            "entry": "vacuum lint",
+            "args": [
+                "--details"
+            ],
+            "types": [
+                "text"
+            ],
+            "files": "(^|/)(openapi|swagger)\\.(json|ya?ml)$"
+        }
+    ],
+    "https://github.com/nuztalgia/botstrap": [
+        {
+            "id": "detect-discord-bot-tokens",
+            "name": "detect discord bot tokens",
+            "description": "Prevents unencrypted/plaintext Discord bot tokens from being committed.",
+            "language": "pygrep",
+            "entry": "(?a)[\\w-]{24,}\\.[\\w-]{6}\\.[\\w-]{27,}"
+        },
+        {
+            "id": "detect-encrypted-tokens",
+            "name": "detect encrypted tokens",
+            "description": "Prevents files containing Botstrap-encrypted tokens from being committed.",
+            "language": "fail",
+            "entry": "*.key files contain encrypted token data and should be gitignored.",
+            "files": ".*\\.(?:content|fernet)\\.key$"
         }
     ]
 }

@@ -3,9 +3,8 @@
 - Prep for open source?
 <!-- -->
 - What about possibility of custom hooks?
-- Simply create a JSON with ext to hook text pairs
 - Print final result in to MD file and let user pick and choose final hooks
-- What about updating the hook list? (test by comparing local json to one from: <https://pre-commit.com/all-hooks.json>)
+- Create a JSON with ext to hook text pairs and from it get the hooks based on found ext
 <!-- -->
 - Modes
   - Select everything by yourself mode (language / name and such)
