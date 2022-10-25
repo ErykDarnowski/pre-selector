@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
 # Imports
-import requests
+from requests import get
 
 # Vars
 url = "https://pre-commit.com/all-hooks.json"
-local_file = "hooks.json"
+local_file = r"../hooks.json"
 
 # Funcs
 def main():
     # Get JSON from url (updated from website):
-    response = requests.get(url)
+    response = get(url)
 
     # Read local `hooks.json` file:
     with open(local_file) as f:
