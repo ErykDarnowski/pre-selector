@@ -2,6 +2,8 @@
 
 A python program to ease picking **pre-commit** hooks.
 
+![image](https://user-images.githubusercontent.com/81530705/197750175-39cc431d-1daa-410b-b2fa-4f1009700f5f.png)
+
 ## TODO
 
 - Prep for open source
