@@ -3,7 +3,7 @@
 # Imports
 import os
 import sys
-import shutil
+from shutil import rmtree
 
 # Vars
 workdir = sys.argv[-1]  # dir to work in (scan)
@@ -44,7 +44,7 @@ if os.path.isdir(workdir + md_folder_name):
     )
     if response == "y" or response == "Y":
         # Remove output dir:
-        shutil.rmtree(workdir + md_folder_name)
+        rmtree(workdir + md_folder_name)
     else:
         exit()
 
@@ -83,7 +83,7 @@ These are the hook groups that are not language specific and are available (you 
 
 # Print other available hook groups (not language based):
 for group in other_groups:
-    file.write("- {}\n".format(group))
+    file.write(f"- {group}\n")
 
 file.write(
     """
@@ -98,15 +98,11 @@ You of course can find / write your own custom hooks and don't have to soley rel
 """
 )
 
-file.write(
-    "These are the auto picked hook groups based on extensions found in: `{}`:\n\n".format(
-        workdir
-    )
-)
+file.write(f"These are the auto picked hook groups based on extensions found in: `{workdir}`:\n\n")
 
 # Print matched hook groups:
 for group in picked_texts:
-    file.write("### {}\n\n".format(group[0]))
+    file.write(f"### {group[0]}\n\n")
     file.write(group[1] + "\n")
 
 file.close()
@@ -129,7 +125,7 @@ file.write(
 
 # Print other hook groups:
 for group in other_texts:
-    file.write("### {}\n\n".format(group[0]))
+    file.write(f"### {group[0]}\n\n")
     file.write(group[1] + "\n")
 
 file.close()

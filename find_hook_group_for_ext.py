@@ -3,11 +3,11 @@
 # Imports
 import os
 import sys
-import json
+from json import load
 
 # Vars
 json_file = open("hook_ext_pairs.json")
-hook_list = json.load(json_file)
+hook_list = load(json_file)
 
 # Check if extension arg was given:
 if len(sys.argv) != 1:

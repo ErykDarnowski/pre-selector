@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 # Imports
-import json
+from json import load
 
 # Vars
 json_file = open("hooks.json")
-data = json.load(json_file)
+data = load(json_file)
 counter = 0
 
 # Getting + printing values:

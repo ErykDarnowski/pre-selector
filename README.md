@@ -7,7 +7,6 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 ## TODO
 
 - Prep for open source
-- Start using the `from` imports?
 - Figure out sorting of the hook group texts?
 - Add diff view of updated file display?
 - Make sure the path given in arg has correct format (`/`)
