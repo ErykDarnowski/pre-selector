@@ -98,7 +98,9 @@ You of course can find / write your own custom hooks and don't have to soley rel
 """
 )
 
-file.write(f"These are the auto picked hook groups based on extensions found in: `{workdir}`:\n\n")
+file.write(
+    f"These are the auto picked hook groups based on extensions found in: `{workdir}`:\n\n"
+)
 
 # Print matched hook groups:
 for group in picked_texts:
