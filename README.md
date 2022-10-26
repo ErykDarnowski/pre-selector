@@ -7,11 +7,13 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 ## TODO
 
 - Prep for open source
-- Figure out sorting of the hook group texts?
+- Don't run when `.git` isn't detected?
+- Automatically add hooks realted to git
 - Add diff view of updated file display?
-- Make sure the path given in arg has correct format (`/`)
+- Figure out sorting of the hook group texts?
 - Run in path where command is called + write the MD files there?
 - Fix the `directories` / `extensions` / `files` situation in the `hook_ext_pairs.json` file
+- Make sure the path given in arg has correct format (`/`) - will be taken from where command is run
 - [Building Beautiful Command Line Interfaces with Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)
 - `generate_output_files.py`
   - TOC generation
@@ -28,7 +30,7 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
     - Figure out better solution for getting file extensions
       - Check if the script really gets all extensions
       - Count amount of each file?
-      - Blacklist certain directories (like `.expo cache`) / make the user do that manually? - ONLY CHECK FILES THAT AREN'T IN GITIGNORE!!!
+      - Blacklist certain directories (like `.expo cache`) / make the user do that manually? - ONLY GET FILES THAT AREN'T IN GITIGNORE!!!
       - Figure out edge cases
         - `run` / `artisan` (no ext) try getting from shebang?
         - `.env.testing` / `.add.spl` (combined ext)
@@ -37,6 +39,7 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 - Fix up things like missing descriptions and so on in `hook_ext_pairs` (from `hooks.json`)
 - Add spinner animations (Sciagi)?
 - Error catching + clear messages
+  - internet (update check scripts)
 - Make sure it works on other OSs
 - [How to build and distribute a CLI Tool with Python](https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78)
   - Add `requirements.txt` file
