@@ -21,19 +21,19 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
   - Fix the `directories` / `extensions` / `files` situation in `hook_ext_pairs.json`
 - `generate_output_files.py`
   - TOC generation
-  - alphabetical sorting
-  - remove new lines from templates (nicer code but harder to edit)
+  - Alphabetical sorting
+  - Remove new lines from templates (nicer code but harder to edit)
 - Add diff view of updated file display?
-  - <https://docs.python.org/3/library/difflib.html>
+  - [difflib — Helpers for computing deltas](https://docs.python.org/3/library/difflib.html)
 - Implement proper import solution
-  - <https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files>
-  - <https://csatlas.com/python-import-file-module/>
+  - [How do I import other Python files?](https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files)
+  - [Import Another Python File as a Module](https://csatlas.com/python-import-file-module/)
 - `get_ext-git.py`
-  - <https://stackoverflow.com/a/8578096/11749019>
-  - <https://stackoverflow.com/a/35188296/11749019>
-  - <https://stackoverflow.com/a/15315667/11749019>
-  - <https://stackoverflow.com/questions/67673018/how-to-execute-raw-git-commands-from-gitpython>
-  - <https://python.hotexamples.com/examples/git/Git/execute/python-git-execute-method-examples.html>
+  - [`git.execute` examples](https://python.hotexamples.com/examples/git/Git/execute/python-git-execute-method-examples.html)
+  - [Python Git Module experiences?](https://stackoverflow.com/a/8578096/11749019)
+  - [Extracting extension from filename in Python](https://stackoverflow.com/a/35188296/11749019)
+  - [How can I call 'git pull' from within Python?](https://stackoverflow.com/a/15315667/11749019)
+  - [how to execute raw git commands from gitpython?](https://stackoverflow.com/questions/67673018/how-to-execute-raw-git-commands-from-gitpython)
 <!-- -->
 - Modes
   - Select everything by yourself mode (language / name and such)
@@ -63,8 +63,8 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 - Make sure it works on other OSs
 - [How to build and distribute a CLI Tool with Python](https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78)
   - Add `requirements.txt` file
-    - <https://www.google.com/search?q=requirements+file&oq=requirements+file&aqs=chrome..69i57.2414j0j1&sourceid=chrome&ie=UTF-8>
-    - <https://stackoverflow.com/a/41117308/11749019>
+    - [Get all modules/packages used by a python project](https://stackoverflow.com/a/41117308/11749019)
+    - [requirements.txt file](https://www.google.com/search?q=requirements+file&oq=requirements+file&aqs=chrome..69i57.2414j0j1&sourceid=chrome&ie=UTF-8)
 
 ## Files
 
