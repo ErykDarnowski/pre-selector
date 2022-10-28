@@ -4,20 +4,11 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 
 ![image](https://user-images.githubusercontent.com/81530705/197750175-39cc431d-1daa-410b-b2fa-4f1009700f5f.png)
 
+<!-- FOR THE FUTURE:
 ## Table of Contents
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 orderedList=false} -->
+[ TOC ]
 
-<!-- code_chunk_output -->
-
-- [pre-SELECTOR](#pre-selector)
-  - [Table of Contents](#table-of-contents)
-  - [TODO](#todo)
-  - [Files](#files)
-
-<!-- /code_chunk_output -->
-
-<!-- FOR FUTURE
 ## Instruction
 
 1. Install by running: `pip install X`.
@@ -27,67 +18,6 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
   - This command can be run anywhere in a repo (it finds the root dir by itself).
   - If there are 'recursive' repos (repos in repos), it get's the "closest" repo (meaning the first root dir it finds going up the dir tree).
 -->
-
-## TODO
-
-- Prep for open source (GIST)
-<!-- -->
-- Run in path where command is called + write the MD files there? (make sure it has the correct format (last `/`))
-- [Building Beautiful Command Line Interfaces with Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)
-- Add diff view of updated file display?
-  - sh pkg + `diff`?
-  - [difflib — Helpers for computing deltas](https://docs.python.org/3/library/difflib.html)
-- Implement proper import solution
-  - [How do I import other Python files?](https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files)
-  - [Import Another Python File as a Module](https://csatlas.com/python-import-file-module/)
-- Ext to hook group pairing
-  - Figure out sorting of the hook group texts (alphabetical, by type)?
-  - Automatically always add hooks related to git
-  - Fix the `directories` / `extensions` / `files` situation in `hook_ext_pairs.json`
-- `generate_output_files.py`
-  - TOC generation
-  - Alphabetical sorting
-  - Remove new lines from templates (nicer code but harder to edit)
-- `is_git_repo.py`
-  - [List the content of a directory for a specific git commit using GitPython](https://stackoverflow.com/a/45330635/11749019)
-- `get_ext-git.py`
-  - [`git.execute` examples](https://python.hotexamples.com/examples/git/Git/execute/python-git-execute-method-examples.html)
-  - [Python Git Module experiences?](https://stackoverflow.com/a/8578096/11749019)
-  - [Extracting extension from filename in Python](https://stackoverflow.com/a/35188296/11749019)
-  - [How can I call 'git pull' from within Python?](https://stackoverflow.com/a/15315667/11749019)
-  - [how to execute raw git commands from gitpython?](https://stackoverflow.com/questions/67673018/how-to-execute-raw-git-commands-from-gitpython)
-  - For some reason, gets the `deleted` files (mobileapp exmaple) - a fix for this seems to simply have all the chagnes staged for the time of getting exts
-<!-- -->
-- Modes
-  - Select everything by yourself mode (language / name and such)
-    - Show detected ext to ease the process? (do so by highlighting certain hook groups?)
-    - Add a search function and pick by checking off a group? (this will then get printed in to an MD file to pick the exact hooks)
-  - Auto select the language ones by detecting ext and than add additional ones yourself
-    - Figure out the exact process (step by step)
-    - Figure out better approach to getting file extensions
-      - Count amount of each file?
-      - Only get files that aren't in `.gitignore`
-        - `git ls-files` (BUT everything needs to be at least staged - check out command options?)
-        - exclude files like `.gitignore` itself and other git files
-        - <https://waylonwalker.com/python-git/>
-        - <https://unix.stackexchange.com/a/358286>
-        - <https://stackoverflow.com/a/51170709/11749019>
-        - <https://gitpython.readthedocs.io/en/0.3.5/tutorial.html>
-      - Figure out edge cases
-        - `run` / `artisan` (no ext) try getting from shebang?
-        - `.env.testing` / `.add.spl` (combined ext)
-        - `.gitattribute` (file names that are the ext)
-<!-- -->
-- Check if the script really gets all extensions
-- Fix up things like missing descriptions and so on in `hook_ext_pairs` (from `hooks.json`)
-- Add spinner animations (Sciagi)?
-- Error catching + clear messages
-  - internet (update check scripts)
-- Make sure it works on other OSs
-- [How to build and distribute a CLI Tool with Python](https://medium.com/nerd-for-tech/how-to-build-and-distribute-a-cli-tool-with-python-537ae41d9d78)
-  - Add `requirements.txt` file
-    - [Get all modules/packages used by a python project](https://stackoverflow.com/a/41117308/11749019)
-    - [requirements.txt file](https://www.google.com/search?q=requirements+file&oq=requirements+file&aqs=chrome..69i57.2414j0j1&sourceid=chrome&ie=UTF-8)
 
 ## Files
 
