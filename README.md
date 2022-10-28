@@ -4,11 +4,35 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 
 ![image](https://user-images.githubusercontent.com/81530705/197750175-39cc431d-1daa-410b-b2fa-4f1009700f5f.png)
 
+## Table of Contents
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [pre-SELECTOR](#pre-selector)
+  - [Table of Contents](#table-of-contents)
+  - [TODO](#todo)
+  - [Files](#files)
+
+<!-- /code_chunk_output -->
+
+<!-- FOR FUTURE
+## Instruction
+
+1. Install by running: `pip install X`.
+2. `cd` in to repo you'd like to add [**pre-commit**]() to.
+3. Temporarily stage all your changes, like so: `git add -A`.
+3. Run: `X`.
+  - This command can be run anywhere in a repo (it finds the root dir by itself).
+  - If there are 'recursive' repos (repos in repos), it get's the "closest" repo (meaning the first root dir it finds going up the dir tree).
+-->
+
 ## TODO
 
 - Prep for open source (GIST)
 <!-- -->
-- Run in path where command is called + write the MD files there? (make sure it has the correct format (`/`))
+- Run in path where command is called + write the MD files there? (make sure it has the correct format (last `/`))
 - [Building Beautiful Command Line Interfaces with Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)
 - Add diff view of updated file display?
   - sh pkg + `diff`?
@@ -17,8 +41,8 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
   - [How do I import other Python files?](https://stackoverflow.com/questions/2349991/how-do-i-import-other-python-files)
   - [Import Another Python File as a Module](https://csatlas.com/python-import-file-module/)
 - Ext to hook group pairing
-  - Automatically add hooks related to git
-  - Figure out sorting of the hook group texts?
+  - Figure out sorting of the hook group texts (alphabetical, by type)?
+  - Automatically always add hooks related to git
   - Fix the `directories` / `extensions` / `files` situation in `hook_ext_pairs.json`
 - `generate_output_files.py`
   - TOC generation
@@ -26,15 +50,13 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
   - Remove new lines from templates (nicer code but harder to edit)
 - `is_git_repo.py`
   - [List the content of a directory for a specific git commit using GitPython](https://stackoverflow.com/a/45330635/11749019)
-  - Info
-    - Command can be run anywhere in a repo (it finds the root by itself)
-    - If there are 'recursive' repos (repos in repos), it get's the "closest" repo
 - `get_ext-git.py`
   - [`git.execute` examples](https://python.hotexamples.com/examples/git/Git/execute/python-git-execute-method-examples.html)
   - [Python Git Module experiences?](https://stackoverflow.com/a/8578096/11749019)
   - [Extracting extension from filename in Python](https://stackoverflow.com/a/35188296/11749019)
   - [How can I call 'git pull' from within Python?](https://stackoverflow.com/a/15315667/11749019)
   - [how to execute raw git commands from gitpython?](https://stackoverflow.com/questions/67673018/how-to-execute-raw-git-commands-from-gitpython)
+  - For some reason, gets the `deleted` files (mobileapp exmaple) - a fix for this seems to simply have all the chagnes staged for the time of getting exts
 <!-- -->
 - Modes
   - Select everything by yourself mode (language / name and such)
