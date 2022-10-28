@@ -21,18 +21,21 @@ files = g.execute(["git", "ls-files"]).split("\n")
 # GET THIS FROM HELPER FILE!
 os.system("cls" if os.name == "nt" else "clear")
 
-t = PrettyTable(["Num", "Path", "Ext (suffix)", "Ext (suffixes)", "Ext (splitext)"])
-t.align = "l"
+table = PrettyTable(
+    ["Num", "Rel path", "Filename", "Ext (suffix)", "Ext (suffixes)", "Ext (splitext)"]
+)
+table.align = "l"
 for i in range(0, len(files)):
     # print(f"{i + 1}. {files[i]} = {pathlib.Path(files[i]).suffix} / {pathlib.Path(files[i]).suffixes} / {os.path.splitext(files[i])[1]}") # <- joing the suffixes? / use suffix?
-    t.add_row(
+    table.add_row(
         [
             i + 1,
             files[i],
+            os.path.basename(files[i]),
             pathlib.Path(files[i]).suffix,
             pathlib.Path(files[i]).suffixes,
             os.path.splitext(files[i])[1],
         ]
     )
 
-print(t)
+print(table)
