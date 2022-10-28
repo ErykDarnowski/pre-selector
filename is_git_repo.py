@@ -59,7 +59,9 @@ def get_git_root(path="."):
         root = subprocess.check_output(
             ["git", "rev-parse", "--show-toplevel"], cwd=path
         )
-        return root.decode('utf-8').replace("\n", "") # str(root).replace("b'", "").replace("\\n'", "")
+        return root.decode("utf-8").replace(
+            "\n", ""
+        )  # str(root).replace("b'", "").replace("\\n'", "")
 
 
 # Check if any path has been given:
@@ -68,7 +70,7 @@ if len(sys.argv) == 1:
 
 repo = get_git_root(workdir)
 if repo is None:
-    print("Couldn't find git repository here / in path!!!") # <- print the path?
+    print("Couldn't find git repository here / in path!!!")  # <- print the path?
     # exit()
 else:
     print(f"Found git repo at: {repo}")

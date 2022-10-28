@@ -16,19 +16,23 @@ if len(sys.argv) == 1:
     sys.exit("You need to give path to dir!!!")
 
 
-files = g.execute(["git", "ls-files"]).split('\n')
+files = g.execute(["git", "ls-files"]).split("\n")
 
 # GET THIS FROM HELPER FILE!
 os.system("cls" if os.name == "nt" else "clear")
 
-
-"""
-for i in range(0, len(files)):
-    print(f"{i + 1}. {files[i]} = {pathlib.Path(files[i]).suffix} / {pathlib.Path(files[i]).suffixes} / {os.path.splitext(files[i])[1]}") # <- joing the suffixes? / use suffix?
-"""
-
-t = PrettyTable(['Num', 'Path', 'Ext (suffix)', 'Ext (suffixes)', 'Ext (splitext)'])
+t = PrettyTable(["Num", "Path", "Ext (suffix)", "Ext (suffixes)", "Ext (splitext)"])
 t.align = "l"
 for i in range(0, len(files)):
-    t.add_row([i + 1, files[i], pathlib.Path(files[i]).suffix, pathlib.Path(files[i]).suffixes, os.path.splitext(files[i])[1]])
+    # print(f"{i + 1}. {files[i]} = {pathlib.Path(files[i]).suffix} / {pathlib.Path(files[i]).suffixes} / {os.path.splitext(files[i])[1]}") # <- joing the suffixes? / use suffix?
+    t.add_row(
+        [
+            i + 1,
+            files[i],
+            pathlib.Path(files[i]).suffix,
+            pathlib.Path(files[i]).suffixes,
+            os.path.splitext(files[i])[1],
+        ]
+    )
+
 print(t)
