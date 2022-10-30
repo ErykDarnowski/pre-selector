@@ -19,6 +19,9 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
   - If there are 'recursive' repos (repos in repos), it get's the "closest" repo (meaning the first root dir it finds going up the dir tree).
 -->
 
+<details>
+<summary>Development</summary>
+
 ## Files
 
 | File                              | Description                                                                                                                                                                                                                                                                                                     |
@@ -33,3 +36,12 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 | `find_hook_group_for_ext.py`      | Print the right text (hook group) from `hook_ext_pairs.json` for extension given as argument.                                                                                                                                                                                                                   |
 | `updates/were_hooks_added.py`     | Check line number difference in local `hooks.json` file and the one hosted on the **pre-commit** website: <https://pre-commit.com/all-hooks.json> to determine whether a hook was added (the approach is supposed to not allow for things like version number bumps to trigger an update alert).                |
 | `updates/are_hooks_up_to_date.py` | Check for any difference between the local `hooks.json` file and the one hosted on the **pre-commit** website: <https://pre-commit.com/all-hooks.json> to determine whether anything was changed (this approach is supposed to allow for things like version number bumps and such to trigger an update alert). |
+
+## To flesh out
+
+Things to test (find edge cases) / flesh out over time.
+
+- `get_ext.py` (`git ls-files` behavior getting all files)
+- `hook_ext_pairs.json` (hook group to ext matching)
+- `detect_from_shebang.py` (matching to ext / variations of being able to write the same shebang)
+</details>
