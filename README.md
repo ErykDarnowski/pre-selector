@@ -1,8 +1,22 @@
 # pre-SELECTOR
 
-A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks.
+A python CLI tool to make setting up [**pre-commit**](https://pre-commit.com/) (picking hook groups) in projects simpler and faster (+ somewhat automated too)!
 
 ![image](https://user-images.githubusercontent.com/81530705/197750175-39cc431d-1daa-410b-b2fa-4f1009700f5f.png)
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [pre-SELECTOR](#pre-selector)
+  - [Development setup](#development-setup)
+    - [Virtual environment](#virtual-environment)
+      - [Initial commands](#initial-commands)
+      - [Additional commands](#additional-commands)
+  - [Files](#files)
+  - [To flesh out](#to-flesh-out)
+
+<!-- /code_chunk_output -->
 
 <!-- FOR THE FUTURE:
 ## Table of Contents
@@ -17,10 +31,75 @@ A python program to ease picking [**pre-commit**](https://pre-commit.com/) hooks
 3. Run: `X`.
   - This command can be run anywhere in a repo (it finds the root dir by itself).
   - If there are 'recursive' repos (repos in repos), it get's the "closest" repo (meaning the first root dir it finds going up the dir tree).
+
+## Development setup
+
+### pre-commit
 -->
 
-<details>
-<summary>Development</summary>
+---
+
+## Development setup
+
+### Virtual environment
+
+The use of a virtual environment while working on python projects is strongly encouraged, as this approach has many benefits (which you can read up on [here](https://towardsdatascience.com/why-you-should-use-a-virtual-environment-for-every-python-project-c17dab3b0fd0))!
+
+#### Initial commands
+
+```bash
+# 1. Create virtual env:
+python3 -m venv venv
+
+# 2. Activate virtual env:
+source venv/bin/activate 
+
+# 3. Install required pkgs:
+pip install -r requirements.txt 
+```
+
+#### Additional commands
+
+- To check whether the virtual environment is **activated** / **deactivated** you can run either of these two commands:
+
+  *(if the command throws an error, the virtual environment isn't **activated**)*
+
+  - ```bash
+    pip -V | grep $PWD
+    ```
+
+  - ```bash
+    echo $VIRTUAL_ENV | grep $PWD
+    ```
+
+- To **deactivate** and delete the virtual environment run:
+
+  ```bash
+  deactivate
+  rm -rf venv # (optional)
+  ```
+
+- To update `pip` in the virtual environment, run:
+
+  ```bash
+  pip install --upgrade pip
+  ```
+
+- To use a `pip` package in the virtual environment, run:
+
+  ```bash
+  python3 -m <pkg_name>
+  ```
+
+- To install / uninstall `pip` packages in the virtual environment, run either:
+
+  - ```bash
+    pip install <pkg_name>
+    ```
+
+  - ```bash
+    pip uninstall <pkg_name>
+    ```
 
 ## Files
 
@@ -44,4 +123,3 @@ Things to test (find edge cases) / flesh out over time.
 - `get_ext.py` (`git ls-files` behavior getting all files)
 - `hook_ext_pairs.json` (hook group to ext matching)
 - `detect_from_shebang.py` (matching to ext / variations of being able to write the same shebang)
-</details>
